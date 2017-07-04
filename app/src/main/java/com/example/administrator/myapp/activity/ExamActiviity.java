@@ -9,6 +9,7 @@ import com.example.administrator.myapp.ExamApplication;
 import com.example.administrator.myapp.R;
 import com.example.administrator.myapp.bean.Exam;
 import com.example.administrator.myapp.bean.Examinfo;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -63,6 +64,9 @@ public class ExamActiviity extends AppCompatActivity {
                 tv0p2.setText(exam.getItem2());
                 tv0p3.setText(exam.getItem3());
                 tv0p4.setText(exam.getItem4());
+                Picasso.with(ExamActiviity.this)
+                        .load(exam.getUrl())
+                        .into(mImageView);
             }
         }
     private void showData (Examinfo examinfo){
