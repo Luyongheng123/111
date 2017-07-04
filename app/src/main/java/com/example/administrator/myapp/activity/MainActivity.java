@@ -32,10 +32,13 @@ public class MainActivity extends AppCompatActivity{
                 Log.e("main", "error= "+error );
             }
         });
-        startActivity(new Intent(MainActivity.this,ExamActiviity.class));
     }
 
     public void exit(View view) {
         finish();
+    }
+
+    public void Randomtest(View view) {
+        startActivity(new Intent(MainActivity.this,ExamActiviity.class));
     }
 }
